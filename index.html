@@ -1,0 +1,166 @@
+<script type="text/javascript">
+    // 값에 의한 복사, 전달 비교
+    // var n = 1;
+    // var m = n;
+
+    // function add_to_total(total, x) {
+    //     total = total + x;
+    // }
+
+    // add_to_total(n, m);
+
+    // if (n == 1) m = 2;
+
+    // var xmas = new Date(2007, 11, 25);
+
+    // var solstice = xmas;
+
+    // solstice.setDate(21);
+
+    // console.log(xmas.getDate());
+
+    // var numbers = [1, 2, 3];
+
+    // function add_to_totals(totals, x) {
+    //     totals[0] = totals[0] + x;
+    //     totals[1] = totals[1] + x;
+    //     totals[2] = totals[2] + x;
+    // }
+
+    // function add_to_totals2(totals, x) {
+    //     newtotals = new Array(3);
+    //     newtotals[0] = totals[0] + x;
+    //     newtotals[1] = totals[1] + x;
+    //     newtotals[2] = totals[2] + x;
+    //     totals = newtotals;
+    // }
+
+    // add_to_totals(numbers, 1);
+    // add_to_totals2(numbers, 1);
+
+    // console.log(numbers);
+
+    // console.log(xmas == solstice);
+
+    // var xmas = new Date(2007, 11, 25);
+    // var solstice_plus_4 = new Date(2007, 11, 25);
+
+    // console.log(xmas != solstice_plus_4);
+
+    // var s1 = "hello";
+    // var s2 = "hell" + "o";
+    // if (s1 == s2) document.write("Strings compared by value");
+
+    // function test(o) {
+    //     var i = 0;
+    //     if (typeof o == "object") {
+    //         var j = 0;
+    //         for (var k = 0; k < 10; k++) {
+    //             document.write(k);
+    //         }
+    //         document.write(k);
+    //     }
+    //     document.write(j);
+    // }
+    // test({});
+
+    // outerloop:
+    //     for(var i = 0; i < 10; i++) {
+    //         innerloop:
+    //         for(var j = 0; j < 10; j++) {
+    //             if (j > 3) break;
+    //             if (i == 2) break innerloop;
+    //             if (i == 4) break outerloop;
+    //             document.write("i = " + i + " j = " + j + "<br>");
+    //         }
+    //     }
+    //     document.write("FINAL i =" + i + " j =" + j + "<br>");
+
+    // function factorial(x) {
+    //     if (x < 0) throw new Error("x must not be negative");
+    //     for (var f = 1; x > 1; f *= x, x--)
+    //     return f;
+    // }
+
+    // document.write(factorial(2));
+
+    // var a = new Array();
+    // for(var i = 1000; i > 0; i--) {
+    //     a[i] = i;
+    // }
+    // document.write(a.sort() + "\n");
+    // document.write(a.sort(function(a, b) {
+    //     console.log(a, b);
+    //     return a-b;
+    // }));
+
+    // function bindArguments(f) {
+    //     var boundArgs = arguments;
+    //     return function() {
+    //         var args = [];
+    //         for (var i = 1; i < boundArgs.length; i++) args.push(boundArgs[i]);
+    //         for (var i = 0; i < arguments.length; i++) args.push(arguments[i]);
+    //         console.log(this);
+    //         return f.apply(this, args);
+    //     }
+    // }
+
+    // var f = function() { 
+    //     var sum = 0;
+    //     for (var i = 0; i < arguments.length; i++) {
+    //         sum += arguments[i];
+    //     }
+    //     document.write(sum);
+    // }
+    // var d = bindArguments(f, 1, 2, 3, 4, 5);
+    // d(1,2,4,5);
+
+    // var x = "global";
+    // function f() {
+    //     var x = "local";
+    //     function g() { alert(x); }
+    //     g();
+    // }
+    // f();
+
+    // function makefunc(x) {
+    //     return function() { return x; }
+    // }
+
+    // var a = [makefunc(0), makefunc(1), makefunc(2)];
+
+    // alert(a[0]());
+    // alert(a[1]());
+    // alert(a[2]());
+    // uniqueID = function() {
+    //     if (!arguments.callee.id) arguments.callee.id = 0;
+    //     return arguments.callee.id++;
+    // }
+
+    // uniqueID = (function() {
+    //     var id = 0;
+    //     return function() { return id++; };
+    // })();
+
+    // uniqueID = function() {
+    //     var id = 0;
+    //     return function() { return id++; };
+    // };
+
+    // for (var i = 0; i <= 100; i++) {
+    //     document.write(uniqueID());
+    // }
+
+    (function() {
+        alert();
+    })();
+</script>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<head>
+    <script type="text/javascript">
+        function CaretToSelBegin () {
+            if (window.getSelection) {  // all browsers, except IE before version 9
+                var selection = window.getSelection ();
+                selection.collapse (selection.anchorNode, selection.anchorOffset);
+            }
+            else {  // Internet Explorer before version 9
+                var textRange = document.selection.createRange ();
+                textRange.collapse (false);
+                textRange.select ();
+            }
+        }
+    </script>
+</head>
+<body>
+    <div onmouseup="CaretToSelBegin ()" contenteditable="true" style="width:400px; background-color:#e0f0d0;">
+        Select some text with your mouse within this field.
+        When the left button is released the caret is placed 
+        at the start point of the selection in Internet Explorer before version 9 and 
+        at the point where the process of selecting was started in other browsers.
+    </div>
+</body>

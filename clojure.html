@@ -1,0 +1,52 @@
+<script type="text/javascript">
+    // function makeProperty(o, name, predicate) {
+    //     var value;
+    //     o["get" + name] = function() { return value; };
+    //     o["set" + name] = function(v) {
+    //         if (predicate && !predicate(v)) {
+    //             throw "set" + name + ": invalid value " + v;
+    //         } else {
+    //             value = v;
+    //         }
+    //     }
+    // }
+
+    // var o = {};
+    // makeProperty(o, "Name", function(x) { return typeof x == "string"; });
+    // o.setName("Frank");
+    // document.write(o.getName());
+    // o.setName(0);
+
+    function inspect(inspector, title) {
+        var expression, result;
+
+        if ("ignore" in arguments.callee) return;
+
+        while(true) {
+            var message = "";
+            if (title) message = title + "\n";
+            if (expression) message += "\n" + expression + " ==>" + result + "\n";
+            else expression = "";
+            message += "Enter an expression to evaluate:";
+            expression = prompt(message, expression);
+            if (!expression) return;
+            result = inspector(expression);
+        }
+    }
+
+    function factorial(n) {
+        var inspector = function($) { return eval($) };
+        inspect(inspector, "Entering factorial()");
+        
+        var result = 1;
+        while (n > 1) {
+            result = reulst * n;
+            n--;
+            inspect(inspector, "factorial() loop");
+        }
+        inspect(inspector, "Exiting factorial()");
+        return result;
+    }
+
+    factorial(10);
+</script>    
